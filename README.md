@@ -288,12 +288,12 @@ pytest
 ```
 
 >Note: The integration test calls the real Gemini model via Google ADK,
->so it requires a valid GOOGLE_API_KEY in your .env file.
+so it requires a valid GOOGLE_API_KEY in your .env file.
 
 ---
 
 ## License
 
 >This project is licensed under the **Apache-2.0 License**.  
-?See the [`LICENSE`](./LICENSE) file for details.
+See the [`LICENSE`](./LICENSE) file for details.
 
