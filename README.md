@@ -101,7 +101,7 @@ python app.py
 Start server inside project root:
 
 ```bash
-adk web agents
+adk web .
 ```
 
 Open:
