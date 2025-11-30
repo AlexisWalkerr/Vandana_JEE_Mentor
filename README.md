@@ -75,6 +75,7 @@ flowchart TD
     Evaluator_Agent -->|update mastery| Progress_Tool
 ````
 
+
 ---
 
 ## Workflow of the System
@@ -100,6 +101,15 @@ sequenceDiagram
     Vandana_Root-->>User: Final response
 ```
 
+---
+
+ ## Installation
+
+  ```bash
+  git clone https://github.com/AlexisWalkerr/Vandana_JEE_Mentor.git
+  cd Vandana_JEE_Mentor
+  pip install -r requirements.txt
+  ```
 ---
 
 ## Project Structure
@@ -284,4 +294,6 @@ pytest
 
 ## License
 
-> Internal academic project. All rights reserved by authors.
+>This project is licensed under the **Apache-2.0 License**.  
+?See the [`LICENSE`](./LICENSE) file for details.
+
