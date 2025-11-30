@@ -1,0 +1,21 @@
+# ================================================================================
+#   Vandana_JEE_Mentor — JEE Multi-Agent AI Mentor
+#
+#   Team Name : Anagha_Vandana
+#   Members   : DHRUVIN NARENDRA BAROT
+#               VARDHAN PATEL
+#               ANUPKUMAR SINGH
+#
+#   File      : adk.yaml
+#   Role      : Agent configuration for ADK Web.
+#               Maps Vandana_root agent to ADK Web UI for browser-based chat.
+#
+#   Use       : Run "adk web agents" and open http://localhost:8000
+#               Select the 'agents' app for Vandana chat interface.
+# ================================================================================
+
+project: Vandana_ai
+
+agents:
+  - path: agents/agent.py
+    entrypoint: root_agent
