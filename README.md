@@ -62,6 +62,21 @@ Students get a **24x7 intelligent coaching companion** without needing paid coac
 
 ---
 
+## System Architecture
+
+```mermaid
+flowchart TD
+    User -->|asks| Vandana_Root
+    Vandana_Root -->|study plan| Planner_Agent
+    Vandana_Root -->|explain topics| Tutor_Agent
+    Vandana_Root -->|generate questions| Question_Agent
+    Vandana_Root -->|evaluate answers| Evaluator_Agent
+    Planner_Agent -->|get syllabus| Syllabus_Tool
+    Evaluator_Agent -->|update mastery| Progress_Tool
+````
+
+---
+
 ## Workflow of the System
 
 ```mermaid
@@ -84,21 +99,6 @@ sequenceDiagram
 
     Vandana_Root-->>User: Final response
 ```
-
----
-
-## System Architecture
-
-```mermaid
-flowchart TD
-    User -->|asks| Vandana_Root
-    Vandana_Root -->|study plan| Planner_Agent
-    Vandana_Root -->|explain topics| Tutor_Agent
-    Vandana_Root -->|generate questions| Question_Agent
-    Vandana_Root -->|evaluate answers| Evaluator_Agent
-    Planner_Agent -->|get syllabus| Syllabus_Tool
-    Evaluator_Agent -->|update mastery| Progress_Tool
-````
 
 ---
 
