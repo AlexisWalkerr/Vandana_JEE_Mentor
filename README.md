@@ -25,6 +25,67 @@ and **Gemini 2.5** models.
 
 
 ---
+## Problem Statement
+
+### JEE (Joint Entrance Examination) is one of the most competitive exams in India.  
+
+Students often struggle with:
+* Not knowing **what to study** and **how much to study**
+* Poor time allocation across Physics, Chemistry, and Maths
+* Identifying and recovering from **weak topics**
+* Getting **quality practice** questions at the right level
+* Lack of constant evaluation and **feedback loops**
+* No personalised guidance outside coaching
+
+This results in:
+* Low confidence  
+* Inefficient learning  
+* Underperformance in exams despite efforts  
+
+There is a strong need for a **personal AI mentor** that supports every step of preparation.
+
+---
+
+## Solution Overview
+
+**Vandana_JEE_Mentor** introduces a **multi-agent AI system** that acts as a personalized JEE mentor.
+
+Powered by Google **ADK** and **Gemini 2.5**, Vandana:
+
+* Creates adaptive daily study plans  
+* Teaches concepts using a tutor agent  
+* Generates exam-style questions instantly  
+* Evaluates answers and tracks progress  
+* Improves strategy based on performance  
+
+Students get a **24x7 intelligent coaching companion** without needing paid coaching support.
+
+---
+
+## Workflow of the System
+
+```mermaid
+sequenceDiagram
+    User->>Vandana_Root: Request (plan, explanation, questions, evaluation)
+    Vandana_Root->>Planner_Agent: Study Plan Request
+    Planner_Agent->>Syllabus_Tool: Fetch topics
+    Planner_Agent->>Progress_Tool: Check mastery
+    Planner_Agent-->>Vandana_Root: Personalized Plan
+
+    Vandana_Root->>Tutor_Agent: Explain Topic
+    Tutor_Agent-->>Vandana_Root: Simplified Explanation
+
+    Vandana_Root->>Question_Agent: Generate Practice
+    Question_Agent-->>Vandana_Root: Questions + Solutions
+
+    User->>Evaluator_Agent: Submit Answers
+    Evaluator_Agent->>Progress_Tool: Update Progress
+    Evaluator_Agent-->>Vandana_Root: Feedback + Tips
+
+    Vandana_Root-->>User: Final response
+```
+
+---
 
 ## System Architecture
 
@@ -67,7 +128,10 @@ Vandana_JEE_Mentor/
 │   └─ progress_tools.py
 │
 └─ data/
-    └─ progress.json      # Auto-generated progress tracking
+|   └─ progress.json      # Auto-generated progress tracking
+└─ tests/
+   ├─ __init__.py
+   └─ test_vandana_agents.py
 ```
 
 ---
@@ -147,7 +211,7 @@ A web chat UI will appear
 
 * Voice-based interaction
 
-* Weekly/monthly plan visualization dashboard
+* Weekly/monthly plan visualisation dashboard
 
 * Adaptive difficulty system based on performance analytics
 
@@ -175,13 +239,46 @@ A web chat UI will appear
 
 ### Try asking Vandana:
 
-> "Help me make a 1 month JEE Main plan."
+> "Help me make a 1-month JEE Main plan."
 
 > "Explain Newton’s laws at JEE Main level."
 
 > "Give 5 medium calculus questions."
 
 > "Check if my answer is correct: Work = F × d = 200 J?"
+
+---
+
+## Tests
+
+This project includes a minimal integration test to verify that the **Vandana root agent**
+can be loaded and produce a reasonable response via `InMemoryRunner`.
+
+Test files are located in:
+
+```text
+Vandana_JEE_Mentor/
+└─ tests/
+   ├─ __init__.py
+   └─ test_vandana_agents.py
+```
+
+## Run the tests
+
+### Install pytest if not already installed:
+
+```bash
+pip install pytest
+```
+
+### From the project root (Vandana_JEE_Mentor), run:
+
+```bash
+pytest
+```
+
+>Note: The integration test calls the real Gemini model via Google ADK,
+>so it requires a valid GOOGLE_API_KEY in your .env file.
 
 ---
 
