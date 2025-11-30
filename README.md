@@ -16,11 +16,13 @@ and **Gemini 2.5** models.
 
 ## Team Information
 
-| Team Name   | Anagha_Vandana                                                                |
-|-------------|-------------------------------------------------------------------------------|
-| Project     | Vandana_JEE_Mentor                                                            |
-| Competition | AI Agents Intensive with Google – Capstone Project                            |
-| Members     | DHRUVIN NARENDRA BAROT *(Lead Developer)*<br>VARDHAN PATEL<br>ANUPKUMAR SINGH |
+    
+   | Team Name   | Anagha_Vandana                                                                |
+   |-------------|-------------------------------------------------------------------------------|
+   | Project     | Vandana_JEE_Mentor                                                            |
+   | Competition | AI Agents Intensive with Google – Capstone Project                            |
+   | Members     | DHRUVIN NARENDRA BAROT *(Lead Developer)*<br>VARDHAN PATEL<br>ANUPKUMAR SINGH |
+
 
 ---
 
