@@ -1,5 +1,59 @@
-```gitignore
-.env
+# -------------------------------
+# Python Cache + Build Artifacts
+# -------------------------------
 __pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+build/
+dist/
+
+# -------------------------------
+# Virtual Environment folders
+# -------------------------------
+venv/
+.env/
+.venv/
+ENV/
+env/
+
+# -------------------------------
+# Environment Variables / Secrets
+# -------------------------------
+.env
+*.env
+
+# -------------------------------
+# VS Code / IDE Settings
+# -------------------------------
+.vscode/
+.idea/
+*.code-workspace
+
+# -------------------------------
+# OS-generated files
+# -------------------------------
+.DS_Store
+Thumbs.db
+
+# -------------------------------
+# Pytest & Python tooling
+# -------------------------------
 .pytest_cache/
+.coverage
+.cache/
+
+# -------------------------------
+# Local runtime/generated data
+# -------------------------------
 data/progress.json
+*.log
+
+# -------------------------------
+# ADK / Model debugging artifacts
+# -------------------------------
+runs/
+trace/
+debug/
